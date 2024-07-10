@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-xl my-content font-color" style="padding-bottom:1%"><br>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" style="border-radius: 2pc;">
+            <div class="carousel-item active">
+                <img style="border-radius: 1pc;" width="450" height="400"
+                     src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fbcf721d5-0f94-43b6-85e6-724de978f941_Thumb.jpeg&w=1920&q=75"
+                     class="d-block w-100% center" alt="image discription">
+            </div>
+            <div class="carousel-item">
+                <img style="border-radius: 1pc;" width="450" height="400"
+                     src="https://cdn.vectorstock.com/i/500p/36/41/do-homework-on-desktop-with-laptop-banner-back-vector-32043641.avif"
+                     class="d-block w-100% center" alt="image discription">
+            </div>
+            <div class="carousel-item">
+                <img style="border-radius: 1pc;" width="450" height="400"
+                     src="https://cdn.vectorstock.com/i/500p/71/17/coding-and-programming-app-in-laptop-for-web-vector-29547117.avif"
+                     class="d-block w-100% center" alt="image discription">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+    <h1>Laptops</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="hp">
+        {% for laptop in laptops %}
+        <div class="col-lg-3 ">
+            <div class="card" style="width: 100%; top: 2%; height: 525px; border-radius: 1pc;">
+                <img style="border-radius: 1pc;" height="290px" src="{{laptop.image_url}}"
+                     class="card-img-top" alt="Image description">
+                <div class="card-body">
+                    <h5 class="card-title">{{laptop.name}}</h5>
+                    <p class="card-text text">{{laptop.price}} ₾</p>
+                    <a href="/product/{{laptop.id}}" class="btn btn-primary" style="position:bottom ">Buy</a>
+                    {% if current_user.role == "admin" %}
+                    <a href="/edit_product/{{laptop.id}}" class="btn btn-primary" style="position:bottom ">Edit</a>
+                    <a href="/delete_product/{{laptop.id}}" class="btn btn-primary" style="position:bottom ">Delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+    <br>
+    <div class="container-fluid mt-4 p-5 jumb-color font-color rounded ">
+        <h1 class="text-white">Bestseller Products</h1>
+        <div class="row align-items-center">
+            <div class="col" style="border-radius: 1pc;">
+                <div class="card mb-3" style="max-width: 590px; border-radius: 1pc; ">
+                    <div class="row g-0" style="border-radius: 1pc;">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center "
+                             style="border-radius: 1pc;">
+                            <img height="100%"
+                                 src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fzoommer-images%2Fthumbs%2F0182726_baseus-metal-adjustable-laptop-stand-lujs000012-silver_550.jpeg&w=256&q=50"
+                                 class="img-fluid rounded-start " alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body1" style="padding: 15px;">
+                                <h5 class="card-title">Baseus Metal Adjustable Laptop Stand LUJS000012 Silver</h5>
+                                <div class="row justify-content-center">
+                                    <div class="col">
+                                        <p class="card-text text">ბრენდი Baseus<br>
+                                            კომპაქტური<br>
+                                            -30c<br>
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text text">ფასი: 149.00 ₾</p>
+                                        <a href="/product/2" class="btn btn-primary"
+                                           style="position:bottom-right ">Buy</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-3" style="max-width: 590px; border-radius: 1pc; ">
+                    <div class="row g-0" style="border-radius: 1pc;">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center "
+                             style="border-radius: 1pc;">
+                            <img height="100%"
+                                 src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F38266614-6a4d-4fd0-9058-95a5249cc2c2_Thumb.jpeg&w=384&q=100"
+                                 class="img-fluid rounded-start " alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body1" style="padding: 15px;">
+                                <h5 class="card-title">Apple MacBook Air 15.3 inch 2024</h5>
+                                <div class="row justify-content-center">
+                                    <div class="col">
+                                        <p class="card-text text">ბრენდი Apple<br>
+                                            Apple<br>
+                                            256gb<br>
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text text">ფასი: 4299.00 ₾</p>
+                                        <a href="/product/3" class="btn btn-primary"
+                                           style="position:bottom-right ">Buy</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h1>Laptop Bags</h1>
+    <div class="col-12 row">
+        {% for bag in laptop_bags %}
+        <div class="col-3">
+            <div class="card" style="width: 100%; top: 2%; height: 525px; border-radius: 1pc;">
+                <img style="border-radius: 1pc;" height="290px" src="{{bag.image_url}}"
+                     class="card-img-top" alt="Image discription">
+                <div class="card-body">
+                    <h5 class="card-title">{{bag.name}}</h5>
+                    <p class="card-text text">{{bag.price}} ₾</p>
+                    <a href="/product/{{bag.id}}" class="btn btn-primary"
+                       style="position:bottom ">Buy</a>
+                    {% if current_user.role == "admin" %}
+                    <a href="/edit_product/{{bag.id}}" class="btn btn-primary" style="position:bottom ">Edit</a>
+                    <a href="/delete_product/{{bag.id}}" class="btn btn-primary"
+                       style="position:bottom ">Delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <br>
+    <h1>Laptop Coolers</h1>
+    <div class="col-12 row align-items-center ">
+        {% for cooler in laptop_coolers %}
+        <div class="col-3">
+            <div class="card" style="width: 100%; top: 2%; height: 525px; border-radius: 1pc;">
+                <img style="border-radius: 1pc;" height="290px" src="{{cooler.image_url}}"
+                     class="card-img-top" alt="Image discription">
+                <div class="card-body">
+                    <h5 class="card-title">{{cooler.name}}</h5>
+                    <p class="card-text text">{{cooler.price}} ₾</p>
+                    <a href="/product/{{cooler.id}}" class="btn btn-primary"
+                       style="position:bottom ">Buy</a>
+                    {% if current_user.role == "admin" %}
+                    <a href="/edit_product/{{cooler.id}}" class="btn btn-primary" style="position:bottom ">Edit</a>
+                    <a href="/delete_product/{{cooler.id}}" class="btn btn-primary"
+                       style="position:bottom ">Delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <br>
+</div>
+
+{% endblock %}

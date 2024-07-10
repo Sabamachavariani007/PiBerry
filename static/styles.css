@@ -1,0 +1,126 @@
+.my-background {
+    background-color: #222; /* Dark gray */
+}
+
+.custom-nav-color {
+    background-color: #111; /* Very dark gray */
+}
+
+.bigger_font {
+    font-size: 100px;
+}
+
+.my-content {
+    background-color: #111; /* Very dark gray */
+    height: 108%;
+    font-size: 25px;
+    color: #ddd; /* Light gray for text */
+}
+
+.my-content2 {
+    background-color: #111; /* Very dark gray */
+    font-size: 25px;
+    color: #ddd; /* Light gray for text */
+}
+
+.font-color {
+    color: #ddd; /* Light gray for text */
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.card-body {
+    height: 220px;
+    width: auto;
+    background-color: #222; /* Dark gray */
+    border-radius: 1pc;
+    color: #ddd; /* Light gray for text */
+}
+
+.card-body1 {
+    height: 250px;
+    width: auto;
+    background-color: #222; /* Dark gray */
+    border-radius: 1pc;
+    color: #ddd; /* Light gray for text */
+}
+
+.text {
+    font-size: 20px;
+    color: #ddd; /* Light gray for text */
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ddd; /* Light gray border */
+}
+
+.avatar-profile {
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ddd; /* Light gray border */
+}
+
+.jumb-color {
+    background-color: #333; /* Darker gray */
+}
+
+.user-card-full {
+    overflow: hidden;
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    border: none;
+    margin-bottom: 30px;
+    background-color: #222; /* Dark gray */
+    color: #ddd; /* Light gray for text */
+}
+
+.m-r-0 {
+    margin-right: 0px;
+}
+
+.m-l-0 {
+    margin-left: 0px;
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px;
+    background-color: #111; /* Very dark gray */
+}
+
+.bg-c-lite-green {
+    background: -webkit-gradient(linear, left top, right top, from(#f29263), to(#ee5a6f));
+    background: linear-gradient(to right, #ee5a6f, #f29263);
+}
+
+.user-profile {
+    padding: 20px 0;
+    color: #ddd; /* Light gray for text */
+}
+
+.card-block {
+    padding: 1.25rem;
+    color: #ddd; /* Light gray for text */
+}
+
+.m-b-25 {
+    margin-bottom: 25px;
+}
+
+.img-radius {
+    border-radius: 5px;
+}
